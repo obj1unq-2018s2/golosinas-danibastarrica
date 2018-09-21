@@ -1,29 +1,29 @@
 
 import golosinas.*
 
-describe"test de caramelo"{
+describe"test de chupetin"{
 	
 
 test "pesoInicial" {
 
-	assert.equals(5, caramelo.peso())
+	assert.equals(7, chupetin.peso())
 }
 
 test "precio" {
-	assert.equals( 1,caramelo.precio())
+	assert.equals( 2,chupetin.precio())
 }
 
 test "mordiscos"{
-	caramelo.mordisco()
-	assert.equals(4, caramelo.peso())
-	caramelo.mordisco()
-	assert.equals(3, caramelo.peso())
+	chupetin.mordisco()
+	assert.equals(6.3, chupetin.peso())
+	chupetin.mordisco()
+	assert.equals(5.67, chupetin.peso())
 }
 test "gusto"{
-	assert.equals("frutilla", caramelo.gusto())
+	assert.equals("naranja", chupetin.gusto())
 }
 test "es libre de Gluten"{
-	assert.that(caramelo.libreGluten())
+	assert.that(chupetin.libreGluten())
 }
 
 }

@@ -71,7 +71,7 @@ object golosinaBaniada {
 	
 	method baniaA(unaGolosina) { golosinaInterior = unaGolosina }
 	method precio()= {golosinaInterior.precio() +2 }
-	method peso()= {golosinaInterior.peso() + pesoBanio}
+	method peso()= {return golosinaInterior.peso() + pesoBanio}
 	method mordisco() {
 		golosinaInterior.mordisco()
 		if (pesoBanio > 0) { pesoBanio -= 2 }
@@ -82,13 +82,13 @@ object golosinaBaniada {
 }
 
 object tuttifrutti {
-	var variedadSabores= ["frutilla","naranja", "chocolate"]
+	var saboresPosibles= ["frutilla","chocolate", "naranja"]
 	var saborActual=0
 	var peso= 5
 	var property libreGluten =false
 	method peso()= peso
-	method precio()= {if (libreGluten) 7 else 5}
-	method sabores()= {variedadSabores.get (saborActual)}
+	method precio()= if (libreGluten) 7 else 10
+    method gusto() = saboresPosibles.get(saborActual)
     method mordisco(){ saborActual = (saborActual + 1) % 3 }
 	// como manejar el cambio de sabor ??
 }

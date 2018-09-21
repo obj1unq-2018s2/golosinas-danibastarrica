@@ -1,0 +1,35 @@
+import golosinas.*
+
+describe "test de golosinaBaniada"{
+	
+	
+	
+	test "peso inicial con tuttifrutti " {
+	
+	golosinaBaniada.baniaA(tuttifrutti)
+	assert.equals(9, golosinaBaniada.peso())
+	}
+	
+	test "peso inicial con chocolatin " {
+	chocolatin.pesoInicial(40)
+	golosinaBaniada.baniaA(chocolatin)
+	assert.equals(11, golosinaBaniada.peso())
+	}
+	test "peso inicial con chupetin " {
+	
+	
+	golosinaBaniada.baniaA(chupetin)
+	assert.equals(11, golosinaBaniada.peso())
+	}
+	
+	test "precio con tuttifrutti" {
+		
+		tuttifrutti.libreGluten (true)
+		golosinaBaniada.baniaA (tuttifrutti)
+		assert.equals (9, golosinaBaniada.precio ())
+		
+		tuttifrutti.libreGluten (false)
+		assert.equals (12, golosinaBaniada.precio ())
+		
+		}
+}
