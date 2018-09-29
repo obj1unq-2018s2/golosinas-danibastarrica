@@ -1,3 +1,11 @@
+// Te escribo aca la resolucion de tu entrega.
+// La logica estaba muy bien en general, estaba bien pensada.
+// Tu problema es que estas con muchos errores de compilacion.
+// Se nota que estas mejorando, y es una lastima que tengas
+// bajas notas en las entregas por errores de sintaxis :(.
+// habla conmigo la proxima clase y vemos de resolver esto.
+// juntos.
+
 object bombon {
 	var peso = 15
 	
@@ -70,8 +78,9 @@ object golosinaBaniada {
 	var pesoBanio = 4
 	
 	method baniaA(unaGolosina) { golosinaInterior = unaGolosina }
-	method precio()= {golosinaInterior.precio() +2 }
-	method peso()= {return golosinaInterior.peso() + pesoBanio}
+	method precio()= golosinaInterior.precio() +2 
+	//Ojo aca si usas un = en los metodos nunca usar llaves {}
+	method peso()= return golosinaInterior.peso() + pesoBanio
 	method mordisco() {
 		golosinaInterior.mordisco()
 		if (pesoBanio > 0) { pesoBanio -= 2 }

@@ -25,21 +25,24 @@ describe "tests de mariano" {
 
 	}
 	
+	// el methodo de assert es that , no That.
 	test "hay golosinas sin tacc"{
-		assert.That(mariano.hayGolosinaSinTACC())
+		assert.that(mariano.hayGolosinaSinTACC())
 	}
 	
 	test "son todas las golosinas precios cuidados"{
 		assert.notThat(mariano.preciosCuidados())
 	}
 	
-	
+	// Segun el test, no tienes golosinas de sabor naranaja.
 	test "golosinaSabor(unSabor)" {
 		assert.equals(chupetin, mariano.golosinaSabor("naranja"))
 	}
 	
+	// Ojo, el mensaje era golosinasSabor no golosinasDeSabor
+	// Segun el test, tienes caramelo y bombon sabor frutilla.
 	test "golosinasSabor(unSabor)" {
-		assert.equals([caramelo, oblea], mariano.golosinasDeSabor("frutilla"))
+		assert.equals([caramelo, oblea], mariano.golosinasSabor("frutilla"))
 	}
 	
 	
@@ -51,17 +54,17 @@ describe "tests de mariano" {
 	test "peso de golosinas()" {
 		assert.equals(120, mariano.pesoGolosinas())}
 	
+	// aca estas testeando una lista con un conjunto.
+	// agregar el asList() para mantener en golosinasfaltantes.
 	test "golosinas faltantes()" {
 		assert.equals([alfajor, chupetin], mariano.golosinasFaltantes([alfajor, bombon, chocolatin, chupetin]))
 	}
 	
-	test "gustos faltantes()" {
-		assert.equals(["melon", "vainilla"], mariano.gustosFaltantes(["melon", "chocolate", "frutilla", "vainilla"]))
-	}
+	// Falto crear el mensaje gustosFaltantes en mariano
+//	test "gustos faltantes()" {
+//		assert.equals(["melon", "vainilla"], mariano.gustosFaltantes(["melon", "chocolate", "frutilla", "vainilla"]))
+//	}
 	
-}
-	
-
 	test "probar golosinas" {
 		/* habilitar las lineas anuladas cuando se complete la definicion 
 		 * de las golosinas

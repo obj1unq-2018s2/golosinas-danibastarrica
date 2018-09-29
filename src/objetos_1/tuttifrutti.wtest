@@ -60,7 +60,7 @@ describe "test de tuttifrutti" {
 		tuttifrutti.mordisco()
 		assert.equals("chocolate", tuttifrutti.gusto())
 		tuttifrutti.mordisco()
-		assert.equals("naranja", tuttifrutti.gusto()
+		assert.equals("naranja", tuttifrutti.gusto())
 	
 	}
 	

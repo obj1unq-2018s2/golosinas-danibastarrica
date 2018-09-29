@@ -10,10 +10,11 @@ describe "test de golosinaBaniada"{
 	assert.equals(9, golosinaBaniada.peso())
 	}
 	
+	// el peso era 44, no 11.
 	test "peso inicial con chocolatin " {
 	chocolatin.pesoInicial(40)
 	golosinaBaniada.baniaA(chocolatin)
-	assert.equals(11, golosinaBaniada.peso())
+	assert.equals(44, golosinaBaniada.peso())
 	}
 	test "peso inicial con chupetin " {
 	
